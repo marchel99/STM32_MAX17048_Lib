@@ -47,7 +47,8 @@ static void lcd_data(uint8_t data)
 
 #define CMD(x)			((x) | 0x100)
 
-static void lcd_send(uint16_t value)
+static void lcd_send(
+  uint16_t value)
 {
 	if (value & 0x100) {
 		lcd_cmd(value);
@@ -152,6 +153,8 @@ void lcd_draw_image(int x, int y, int width, int height, const uint8_t* data)
 	lcd_set_window(x, y, width, height);
 
 	lcd_cmd(ST7735S_RAMWR);
-	for (int i = 0; i < width * height * 2; i++)
-		lcd_data(data[i]);
+	HAL_GPIO_WritePin(LCD_DC_GPIO_Port, LCD_DC_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(LCD_CS_GPIO_Port, LCD_CS_Pin, GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&hspi2, (uint8_t*)data, width * height * 2, HAL_MAX_DELAY);
+	HAL_GPIO_WritePin(LCD_CS_GPIO_Port, LCD_CS_Pin, GPIO_PIN_SET);
 }
