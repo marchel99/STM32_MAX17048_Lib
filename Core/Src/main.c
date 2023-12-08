@@ -108,7 +108,7 @@ int main(void)
       lcd_put_pixel(i, i, RED);
       lcd_put_pixel(127 - i, i, RED);
     }
-    lcd_draw_image(35, 20, 100, 80, forbot_logo);
+    lcd_draw_image(35, 20, 100, 90, wiki_logo);
 
 
 
