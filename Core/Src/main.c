@@ -111,12 +111,8 @@ int main(void)
     lcd_draw_image(35, 20, 100, 90, wiki_logo);
 
 
-
   while (1)
   {
-
-    
-
 
 
 
