@@ -1,0 +1,22 @@
+# ninja log v5
+46	268	7237593190115244	CMakeFiles/CC.dir/Core/Startup/startup_stm32l476rgtx.s.obj	17b00123ed74a9d
+16	914	7237593196625395	CMakeFiles/CC.dir/Core/Src/stm32l4xx_it.c.obj	8ddaccd6b92b7d1a
+23	389	7237593191200164	CMakeFiles/CC.dir/Core/Src/syscalls.c.obj	5c37a1f9c6d01ce9
+57	412	7237593191517937	CMakeFiles/CC.dir/Core/Src/sysmem.c.obj	260c7d187f2adf0e
+76	787	7237593195316843	CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c.obj	1322f0bfa83f2be6
+39	694	7237593194371043	CMakeFiles/CC.dir/Core/Src/system_stm32l4xx.c.obj	5647b1f081309236
+122	915	7237593196625395	CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c.obj	ae3d4e89ffbe87d7
+30	763	7237593195000188	CMakeFiles/CC.dir/Core/Src/stm32l4xx_hal_msp.c.obj	83e0c69f08db8c5c
+108	947	7237593196997779	CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c.obj	b2c1323186977df6
+30	661	7237597044675623	CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c.obj	6cbc702306218569
+68	948	7237593196997779	CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj	78786838f5b9f963
+98	996	7237593197373787	CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c.obj	3e362741faaa31ed
+89	1001	7237593197531638	CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c.obj	1e4c2bb617d4a7ec
+16	615	7237597044254279	CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj	c85202919069bda9
+53	619	7237597044274482	CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi_ex.c.obj	aa76c08c4dcfdae0
+22	627	7237597044324463	CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c.obj	c6ddeba5bb566eef
+36	634	7237597044389586	CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c.obj	d6bb3d13d73d70f8
+94	683	7237597044899781	CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj	81971d5462dedcf2
+75	720	7237597045182985	CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj	226501e17ddeb5f6
+45	727	7237597045333520	CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.obj	b5489566690dee1d
+66	838	7237597046421481	CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c.obj	f85a0653607eb3de
