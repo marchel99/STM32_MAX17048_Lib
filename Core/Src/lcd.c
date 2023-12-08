@@ -6,10 +6,8 @@
  */
 
 
-
 #include "lcd.h"
 #include "spi.h"
-
 #define ST7735S_SLPOUT			0x11
 #define ST7735S_DISPOFF			0x28
 #define ST7735S_DISPON			0x29
@@ -98,4 +96,62 @@ void lcd_init(void)
   HAL_Delay(120);
 
   lcd_cmd(ST7735S_DISPON);
+}
+
+
+
+
+
+
+
+static void lcd_data16(uint16_t value)
+{
+	lcd_data(value >> 8);
+	lcd_data(value);
+}
+
+#define LCD_OFFSET_X  1
+#define LCD_OFFSET_Y  2
+
+
+#define LCD_OFFSET_X  1
+#define LCD_OFFSET_Y  2
+
+static void lcd_set_window(int x, int y, int width, int height)
+{
+  lcd_cmd(ST7735S_CASET);
+  lcd_data16(LCD_OFFSET_X + x);
+  lcd_data16(LCD_OFFSET_X + x + width - 1);
+ 
+  lcd_cmd(ST7735S_RASET);
+  lcd_data16(LCD_OFFSET_Y + y);
+  lcd_data16(LCD_OFFSET_Y + y + height- 1);
+}
+
+
+void lcd_fill_box(int x, int y, int width, int height, uint16_t color)
+{
+	lcd_set_window(x, y, width, height);
+
+	lcd_cmd(ST7735S_RAMWR);
+	for (int i = 0; i < width * height; i++)
+		lcd_data16(color);
+}
+
+
+
+void lcd_put_pixel(int x, int y, uint16_t color)
+{
+  lcd_fill_box(x, y, 1, 1, color);
+}
+
+
+
+void lcd_draw_image(int x, int y, int width, int height, const uint8_t* data)
+{
+	lcd_set_window(x, y, width, height);
+
+	lcd_cmd(ST7735S_RAMWR);
+	for (int i = 0; i < width * height * 2; i++)
+		lcd_data(data[i]);
 }
