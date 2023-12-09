@@ -104,8 +104,10 @@ lcd_fill_box(0, 80, 160, 16, CYAN);
 lcd_fill_box(0, 96, 160, 16, WHITE);
 lcd_fill_box(0, 112, 160, 16, BLACK);
 
+
+
 for (int i = 0; i < 64 * 64; i++)
-  test_image[i] = WHITE;
+  test_image[i] = (BLUE >> 8) | (BLUE << 8);
 
 lcd_draw_image(0, 0, 64, 64, test_image);
 lcd_draw_image(16, 16, 64, 64, test_image);
