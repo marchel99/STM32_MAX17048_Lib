@@ -1,42 +1,40 @@
 /* USER CODE BEGIN Header */
 /**
-  ******************************************************************************
-  * @file           : main.c
-  * @brief          : Main program body
-  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2023 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
+ ******************************************************************************
+ * @file           : main.c
+ * @brief          : Main program body
+ ******************************************************************************
+ * @attention
+ *
+ * Copyright (c) 2023 STMicroelectronics.
+ * All rights reserved.
+ *
+ * This software is licensed under terms that can be found in the LICENSE file
+ * in the root directory of this software component.
+ * If no LICENSE file comes with this software, it is provided AS-IS.
+ *
+ ******************************************************************************
+ */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "i2c.h"
 #include "rtc.h"
 #include "spi.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-//#include "lcd.h"
-//#include "logo.c"
+// #include "lcd.h"
+// #include "logo.c"
 #include <wchar.h>
 #include "hagl.h"
 #include "font6x9.h"
 #include "rgb565.h"
 
-
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
-
-
 
 /* USER CODE END Includes */
 
@@ -69,7 +67,7 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-uint16_t test_image[64*64];
+uint16_t test_image[64 * 64];
 /* USER CODE END 0 */
 
 /**
@@ -80,8 +78,8 @@ int main(void)
 {
   /* USER CODE BEGIN 1 */
 
-HAL_StatusTypeDef HAL_RTC_GetTime(RTC_HandleTypeDef *hrtc, RTC_TimeTypeDef *sTime, uint32_t Format);
-HAL_StatusTypeDef HAL_RTC_GetDate(RTC_HandleTypeDef *hrtc, RTC_DateTypeDef *sDate, uint32_t Format);
+  HAL_StatusTypeDef HAL_RTC_GetTime(RTC_HandleTypeDef * hrtc, RTC_TimeTypeDef * sTime, uint32_t Format);
+  HAL_StatusTypeDef HAL_RTC_GetDate(RTC_HandleTypeDef * hrtc, RTC_DateTypeDef * sDate, uint32_t Format);
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -104,6 +102,7 @@ HAL_StatusTypeDef HAL_RTC_GetDate(RTC_HandleTypeDef *hrtc, RTC_DateTypeDef *sDat
   MX_GPIO_Init();
   MX_SPI2_Init();
   MX_RTC_Init();
+  MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
@@ -111,68 +110,51 @@ HAL_StatusTypeDef HAL_RTC_GetDate(RTC_HandleTypeDef *hrtc, RTC_DateTypeDef *sDat
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
+  /* RTC_TimeTypeDef time;
+  RTC_DateTypeDef date;
 
+  HAL_RTC_GetTime(&hrtc, &time, RTC_FORMAT_BIN);
+  HAL_RTC_GetDate(&hrtc, &date, RTC_FORMAT_BIN);
 
-/* RTC_TimeTypeDef time;
-RTC_DateTypeDef date;
- 
-HAL_RTC_GetTime(&hrtc, &time, RTC_FORMAT_BIN);
-HAL_RTC_GetDate(&hrtc, &date, RTC_FORMAT_BIN);
+   */
 
- */
+  lcd_init();
 
+  /* // RECTANGLE
+  for (int i = 0; i < 8; i++) {
+    hagl_draw_rounded_rectangle(2+i, 2+i, 158-i, 126-i, 8-i, rgb565(0, 0, i*16));
+  }
 
-lcd_init();
- 
-/* // RECTANGLE
-for (int i = 0; i < 8; i++) {
-  hagl_draw_rounded_rectangle(2+i, 2+i, 158-i, 126-i, 8-i, rgb565(0, 0, i*16));
-}
+   */
 
- */
+  float your_variable = 1.000; // Przykładowa zmienna int
+  wchar_t buffer[32];          // Bufor na ciąg znaków, musi być wystarczająco duży
 
-float your_variable = 1.000; // Przykładowa zmienna int
-wchar_t buffer[32]; // Bufor na ciąg znaków, musi być wystarczająco duży
+  // Konwersja int na ciąg znaków
+  swprintf(buffer, 32, L"Pomiar prądu: %.2f mA", your_variable);
 
-// Konwersja int na ciąg znaków
-swprintf(buffer, 32, L"Pomiar prądu: %.2f mA", your_variable);
+  // hagl_put_text(L"Godzina: ", 15, 20, WHITE, font6x9);
+  //-l_+p , -g|+d
 
+  hagl_put_text(L"Pomiar napięcia:  ", 15, 30, WHITE, font6x9);
 
+  // Teraz możesz wywołać funkcję hagl_put_text z tym buforem
+  hagl_put_text(buffer, 15, 40, WHITE, font6x9);
 
-
-
-//hagl_put_text(L"Godzina: ", 15, 20, WHITE, font6x9);
-                              //-l_+p , -g|+d 
-
-hagl_put_text(L"Pomiar napięcia:  ", 15, 30, WHITE, font6x9);
-
-// Teraz możesz wywołać funkcję hagl_put_text z tym buforem
-hagl_put_text(buffer, 15, 40, WHITE, font6x9);
-
-
-
-
-wchar_t time_buffer[32]; // Bufor na ciąg znaków, musi być wystarczająco duży
-
+  wchar_t time_buffer[32]; // Bufor na ciąg znaków, musi być wystarczająco duży
 
   while (1)
   {
 
-RTC_TimeTypeDef time;
+    RTC_TimeTypeDef time;
     RTC_DateTypeDef date;
     HAL_RTC_GetTime(&hrtc, &time, RTC_FORMAT_BIN);
-    HAL_RTC_GetDate(&hrtc, &date, RTC_FORMAT_BIN); // Ta funkcja musi być wywołana po GetTime
+    HAL_RTC_GetDate(&hrtc, &date, RTC_FORMAT_BIN); // Funkcja musi być wywołana po GetTime
     swprintf(time_buffer, sizeof(time_buffer), L"Czas: %02d:%02d:%02d", time.Hours, time.Minutes, time.Seconds);
 
-    // Wyświetlenie zaktualizowanego czasu
     hagl_put_text(time_buffer, 15, 20, WHITE, font6x9);
-
-    // Odświeżenie wyświetlacza, aby pokazać nowy tekst
     lcd_copy();
-
-    // Opóźnienie przed następną aktualizacją
     HAL_Delay(1000);
-
 
     /* USER CODE END WHILE */
 

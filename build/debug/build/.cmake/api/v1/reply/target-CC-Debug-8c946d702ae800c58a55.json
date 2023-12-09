@@ -161,7 +161,7 @@
 				16,
 				17,
 				18,
-				20,
+				19,
 				21,
 				22,
 				23,
@@ -179,7 +179,10 @@
 				35,
 				36,
 				37,
-				38
+				38,
+				39,
+				40,
+				41
 			]
 		},
 		{
@@ -215,7 +218,7 @@
 			"language" : "ASM",
 			"sourceIndexes" : 
 			[
-				19
+				20
 			]
 		}
 	],
@@ -292,7 +295,7 @@
 				16,
 				17,
 				18,
-				20,
+				19,
 				21,
 				22,
 				23,
@@ -310,14 +313,17 @@
 				35,
 				36,
 				37,
-				38
+				38,
+				39,
+				40,
+				41
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				19
+				20
 			]
 		}
 	],
@@ -375,6 +381,12 @@
 			"backtrace" : 7,
 			"compileGroupIndex" : 0,
 			"path" : "Core/Src/gpio.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "Core/Src/i2c.c",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -489,6 +501,18 @@
 			"backtrace" : 7,
 			"compileGroupIndex" : 0,
 			"path" : "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c",
 			"sourceGroupIndex" : 0
 		},
 		{

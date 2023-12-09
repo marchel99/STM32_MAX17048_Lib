@@ -7,7 +7,7 @@
 
 //Definicje kolorów z odwróconą kolejnością bajtów
 #define BLACK			0x0000
-#define RED			0x00f8
+#define RED		    	0x00f8
 #define GREEN			0xe007
 #define BLUE			0x1f00
 #define YELLOW			0xe0ff
