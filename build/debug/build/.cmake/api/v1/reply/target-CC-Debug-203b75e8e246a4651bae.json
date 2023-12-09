@@ -152,6 +152,7 @@
 				7,
 				8,
 				9,
+				10,
 				11,
 				12,
 				13,
@@ -160,7 +161,6 @@
 				16,
 				17,
 				18,
-				19,
 				20,
 				21,
 				22,
@@ -176,7 +176,10 @@
 				32,
 				33,
 				34,
-				35
+				35,
+				36,
+				37,
+				38
 			]
 		},
 		{
@@ -212,7 +215,7 @@
 			"language" : "ASM",
 			"sourceIndexes" : 
 			[
-				10
+				19
 			]
 		}
 	],
@@ -280,6 +283,7 @@
 				7,
 				8,
 				9,
+				10,
 				11,
 				12,
 				13,
@@ -288,7 +292,6 @@
 				16,
 				17,
 				18,
-				19,
 				20,
 				21,
 				22,
@@ -304,19 +307,70 @@
 				32,
 				33,
 				34,
-				35
+				35,
+				36,
+				37,
+				38
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				10
+				19
 			]
 		}
 	],
 	"sources" : 
 	[
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "hagl/src/bitmap.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "hagl/src/clip.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "hagl/src/fontx.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "hagl/src/hagl.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "hagl/src/hsl.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "hagl/src/rgb565.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "hagl/src/rgb888.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "hagl/src/tjpgd.c",
+			"sourceGroupIndex" : 0
+		},
 		{
 			"backtrace" : 7,
 			"compileGroupIndex" : 0,
@@ -339,6 +393,12 @@
 			"backtrace" : 7,
 			"compileGroupIndex" : 0,
 			"path" : "Core/Src/main.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "Core/Src/rtc.c",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -458,6 +518,18 @@
 		{
 			"backtrace" : 7,
 			"compileGroupIndex" : 0,
+			"path" : "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rtc_ex.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rtc.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
 			"path" : "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi_ex.c",
 			"sourceGroupIndex" : 0
 		},
@@ -483,54 +555,6 @@
 			"backtrace" : 7,
 			"compileGroupIndex" : 0,
 			"path" : "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 7,
-			"compileGroupIndex" : 0,
-			"path" : "hagl/src/bitmap.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 7,
-			"compileGroupIndex" : 0,
-			"path" : "hagl/src/clip.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 7,
-			"compileGroupIndex" : 0,
-			"path" : "hagl/src/fontx.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 7,
-			"compileGroupIndex" : 0,
-			"path" : "hagl/src/hagl.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 7,
-			"compileGroupIndex" : 0,
-			"path" : "hagl/src/hsl.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 7,
-			"compileGroupIndex" : 0,
-			"path" : "hagl/src/rgb565.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 7,
-			"compileGroupIndex" : 0,
-			"path" : "hagl/src/rgb888.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 7,
-			"compileGroupIndex" : 0,
-			"path" : "hagl/src/tjpgd.c",
 			"sourceGroupIndex" : 0
 		}
 	],

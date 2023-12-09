@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "rtc.h"
 #include "spi.h"
 #include "gpio.h"
 
@@ -79,6 +80,8 @@ int main(void)
 {
   /* USER CODE BEGIN 1 */
 
+HAL_StatusTypeDef HAL_RTC_GetTime(RTC_HandleTypeDef *hrtc, RTC_TimeTypeDef *sTime, uint32_t Format);
+HAL_StatusTypeDef HAL_RTC_GetDate(RTC_HandleTypeDef *hrtc, RTC_DateTypeDef *sDate, uint32_t Format);
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -100,6 +103,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_SPI2_Init();
+  MX_RTC_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
@@ -137,7 +141,7 @@ swprintf(buffer, 32, L"Pomiar prądu: %.2f mA", your_variable);
 
 
 
-hagl_put_text(L"Godzina: ", 15, 20, WHITE, font6x9);
+//hagl_put_text(L"Godzina: ", 15, 20, WHITE, font6x9);
                               //-l_+p , -g|+d 
 
 hagl_put_text(L"Pomiar napięcia:  ", 15, 30, WHITE, font6x9);
@@ -146,11 +150,28 @@ hagl_put_text(L"Pomiar napięcia:  ", 15, 30, WHITE, font6x9);
 hagl_put_text(buffer, 15, 40, WHITE, font6x9);
 
 
-lcd_copy();
+
+
+wchar_t time_buffer[32]; // Bufor na ciąg znaków, musi być wystarczająco duży
+
 
   while (1)
   {
 
+RTC_TimeTypeDef time;
+    RTC_DateTypeDef date;
+    HAL_RTC_GetTime(&hrtc, &time, RTC_FORMAT_BIN);
+    HAL_RTC_GetDate(&hrtc, &date, RTC_FORMAT_BIN); // Ta funkcja musi być wywołana po GetTime
+    swprintf(time_buffer, sizeof(time_buffer), L"Czas: %02d:%02d:%02d", time.Hours, time.Minutes, time.Seconds);
+
+    // Wyświetlenie zaktualizowanego czasu
+    hagl_put_text(time_buffer, 15, 20, WHITE, font6x9);
+
+    // Odświeżenie wyświetlacza, aby pokazać nowy tekst
+    lcd_copy();
+
+    // Opóźnienie przed następną aktualizacją
+    HAL_Delay(1000);
 
 
     /* USER CODE END WHILE */
@@ -179,7 +200,8 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_MSI;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_LSI|RCC_OSCILLATORTYPE_MSI;
+  RCC_OscInitStruct.LSIState = RCC_LSI_ON;
   RCC_OscInitStruct.MSIState = RCC_MSI_ON;
   RCC_OscInitStruct.MSICalibrationValue = 0;
   RCC_OscInitStruct.MSIClockRange = RCC_MSIRANGE_6;

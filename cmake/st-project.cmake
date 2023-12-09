@@ -73,10 +73,19 @@ target_link_options(
 
 target_sources(
     ${TARGET_NAME} PRIVATE
+    "hagl\\src\\bitmap.c"
+    "hagl\\src\\clip.c"
+    "hagl\\src\\fontx.c"
+    "hagl\\src\\hagl.c"
+    "hagl\\src\\hsl.c"
+    "hagl\\src\\rgb565.c"
+    "hagl\\src\\rgb888.c"
+    "hagl\\src\\tjpgd.c"
     "Core\\Src\\gpio.c"
     "Core\\Src\\lcd.c"
     "Core\\Src\\logo.c"
     "Core\\Src\\main.c"
+    "Core\\Src\\rtc.c"
     "Core\\Src\\spi.c"
     "Core\\Src\\stm32l4xx_hal_msp.c"
     "Core\\Src\\stm32l4xx_it.c"
@@ -96,19 +105,13 @@ target_sources(
     "Drivers\\STM32L4xx_HAL_Driver\\Src\\stm32l4xx_hal_pwr.c"
     "Drivers\\STM32L4xx_HAL_Driver\\Src\\stm32l4xx_hal_rcc_ex.c"
     "Drivers\\STM32L4xx_HAL_Driver\\Src\\stm32l4xx_hal_rcc.c"
+    "Drivers\\STM32L4xx_HAL_Driver\\Src\\stm32l4xx_hal_rtc_ex.c"
+    "Drivers\\STM32L4xx_HAL_Driver\\Src\\stm32l4xx_hal_rtc.c"
     "Drivers\\STM32L4xx_HAL_Driver\\Src\\stm32l4xx_hal_spi_ex.c"
     "Drivers\\STM32L4xx_HAL_Driver\\Src\\stm32l4xx_hal_spi.c"
     "Drivers\\STM32L4xx_HAL_Driver\\Src\\stm32l4xx_hal_tim_ex.c"
     "Drivers\\STM32L4xx_HAL_Driver\\Src\\stm32l4xx_hal_tim.c"
     "Drivers\\STM32L4xx_HAL_Driver\\Src\\stm32l4xx_hal.c"
-    "hagl\\src\\bitmap.c"
-    "hagl\\src\\clip.c"
-    "hagl\\src\\fontx.c"
-    "hagl\\src\\hagl.c"
-    "hagl\\src\\hsl.c"
-    "hagl\\src\\rgb565.c"
-    "hagl\\src\\rgb888.c"
-    "hagl\\src\\tjpgd.c"
 )
 
 add_custom_command(
