@@ -1,0 +1,11 @@
+tjpgd.c:127:14:alloc_pool	2
+tjpgd.c:153:12:create_qt_tbl	6
+tjpgd.c:189:12:create_huffman_tbl	14
+tjpgd.c:244:12:bitext	9
+tjpgd.c:294:16:huffext	11
+tjpgd.c:354:13:block_idct	3
+tjpgd.c:466:16:mcu_load	18
+tjpgd.c:549:16:mcu_output	24
+tjpgd.c:703:16:restart	6
+tjpgd.c:750:9:jd_prepare	52
+tjpgd.c:926:9:jd_decomp	9

@@ -1,0 +1,2 @@
+../hagl/src/clip.c:48:16:code	32	static
+../hagl/src/clip.c:65:6:clip_line	40	static

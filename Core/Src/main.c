@@ -23,8 +23,20 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "lcd.h"
-#include "logo.c"
+//#include "lcd.h"
+//#include "logo.c"
+#include <wchar.h>
+#include "hagl.h"
+#include "font6x9.h"
+#include "rgb565.h"
+
+
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+
+
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -94,15 +106,48 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
+
+
+/* RTC_TimeTypeDef time;
+RTC_DateTypeDef date;
+ 
+HAL_RTC_GetTime(&hrtc, &time, RTC_FORMAT_BIN);
+HAL_RTC_GetDate(&hrtc, &date, RTC_FORMAT_BIN);
+
+ */
+
+
 lcd_init();
  
-for (int y = 0; y < LCD_HEIGHT; y++) {
-  for (int x = 0; x < LCD_WIDTH; x++) {
-    lcd_put_pixel(x, y, __REV16(x / 10 + y * 16));
-  }
+/* // RECTANGLE
+for (int i = 0; i < 8; i++) {
+  hagl_draw_rounded_rectangle(2+i, 2+i, 158-i, 126-i, 8-i, rgb565(0, 0, i*16));
 }
- 
+
+ */
+
+float your_variable = 1.000; // Przykładowa zmienna int
+wchar_t buffer[32]; // Bufor na ciąg znaków, musi być wystarczająco duży
+
+// Konwersja int na ciąg znaków
+swprintf(buffer, 32, L"Pomiar prądu: %.2f mA", your_variable);
+
+
+
+
+
+hagl_put_text(L"Godzina: ", 15, 20, WHITE, font6x9);
+                              //-l_+p , -g|+d 
+
+hagl_put_text(L"Pomiar napięcia:  ", 15, 30, WHITE, font6x9);
+
+// Teraz możesz wywołać funkcję hagl_put_text z tym buforem
+hagl_put_text(buffer, 15, 40, WHITE, font6x9);
+
+
 lcd_copy();
+
   while (1)
   {
 

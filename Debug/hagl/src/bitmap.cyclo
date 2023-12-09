@@ -1,0 +1,4 @@
+bitmap.c:43:10:bitmap_size	1
+bitmap.c:48:6:bitmap_init	1
+bitmap.c:59:6:bitmap_blit	12
+bitmap.c:123:6:bitmap_scale_blit	12

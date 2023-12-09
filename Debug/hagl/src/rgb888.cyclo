@@ -1,0 +1,4 @@
+rgb888.h:49:19:min	2
+rgb888.h:56:19:max	2
+rgb888.c:43:7:rgb888_to_hsl	6
+rgb888.c:90:10:rgb888_to_rgb565	1

@@ -47,7 +47,7 @@ build CMakeFiles/CC.dir/Core/Src/gpio.c.obj: C_COMPILER__CC_Debug ../../../Core/
   DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\CC.dir\Core\Src\gpio.c.obj.d
   FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
-  INCLUDES = -I../../../Core/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\CC.dir
   OBJECT_FILE_DIR = CMakeFiles\CC.dir\Core\Src
 
@@ -55,7 +55,15 @@ build CMakeFiles/CC.dir/Core/Src/lcd.c.obj: C_COMPILER__CC_Debug ../../../Core/S
   DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\CC.dir\Core\Src\lcd.c.obj.d
   FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
-  INCLUDES = -I../../../Core/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\CC.dir
+  OBJECT_FILE_DIR = CMakeFiles\CC.dir\Core\Src
+
+build CMakeFiles/CC.dir/Core/Src/logo.c.obj: C_COMPILER__CC_Debug ../../../Core/Src/logo.c || cmake_object_order_depends_target_CC
+  DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\CC.dir\Core\Src\logo.c.obj.d
+  FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\CC.dir
   OBJECT_FILE_DIR = CMakeFiles\CC.dir\Core\Src
 
@@ -63,7 +71,7 @@ build CMakeFiles/CC.dir/Core/Src/main.c.obj: C_COMPILER__CC_Debug ../../../Core/
   DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\CC.dir\Core\Src\main.c.obj.d
   FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
-  INCLUDES = -I../../../Core/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\CC.dir
   OBJECT_FILE_DIR = CMakeFiles\CC.dir\Core\Src
 
@@ -71,7 +79,7 @@ build CMakeFiles/CC.dir/Core/Src/spi.c.obj: C_COMPILER__CC_Debug ../../../Core/S
   DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\CC.dir\Core\Src\spi.c.obj.d
   FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
-  INCLUDES = -I../../../Core/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\CC.dir
   OBJECT_FILE_DIR = CMakeFiles\CC.dir\Core\Src
 
@@ -79,7 +87,7 @@ build CMakeFiles/CC.dir/Core/Src/stm32l4xx_hal_msp.c.obj: C_COMPILER__CC_Debug .
   DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\CC.dir\Core\Src\stm32l4xx_hal_msp.c.obj.d
   FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
-  INCLUDES = -I../../../Core/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\CC.dir
   OBJECT_FILE_DIR = CMakeFiles\CC.dir\Core\Src
 
@@ -87,7 +95,7 @@ build CMakeFiles/CC.dir/Core/Src/stm32l4xx_it.c.obj: C_COMPILER__CC_Debug ../../
   DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\CC.dir\Core\Src\stm32l4xx_it.c.obj.d
   FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
-  INCLUDES = -I../../../Core/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\CC.dir
   OBJECT_FILE_DIR = CMakeFiles\CC.dir\Core\Src
 
@@ -95,7 +103,7 @@ build CMakeFiles/CC.dir/Core/Src/syscalls.c.obj: C_COMPILER__CC_Debug ../../../C
   DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\CC.dir\Core\Src\syscalls.c.obj.d
   FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
-  INCLUDES = -I../../../Core/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\CC.dir
   OBJECT_FILE_DIR = CMakeFiles\CC.dir\Core\Src
 
@@ -103,7 +111,7 @@ build CMakeFiles/CC.dir/Core/Src/sysmem.c.obj: C_COMPILER__CC_Debug ../../../Cor
   DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\CC.dir\Core\Src\sysmem.c.obj.d
   FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
-  INCLUDES = -I../../../Core/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\CC.dir
   OBJECT_FILE_DIR = CMakeFiles\CC.dir\Core\Src
 
@@ -111,7 +119,7 @@ build CMakeFiles/CC.dir/Core/Src/system_stm32l4xx.c.obj: C_COMPILER__CC_Debug ..
   DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\CC.dir\Core\Src\system_stm32l4xx.c.obj.d
   FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
-  INCLUDES = -I../../../Core/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\CC.dir
   OBJECT_FILE_DIR = CMakeFiles\CC.dir\Core\Src
 
@@ -126,7 +134,7 @@ build CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.
   DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_cortex.c.obj.d
   FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
-  INCLUDES = -I../../../Core/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\CC.dir
   OBJECT_FILE_DIR = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
@@ -134,7 +142,7 @@ build CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c.
   DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_dma_ex.c.obj.d
   FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
-  INCLUDES = -I../../../Core/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\CC.dir
   OBJECT_FILE_DIR = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
@@ -142,7 +150,7 @@ build CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c.obj
   DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_dma.c.obj.d
   FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
-  INCLUDES = -I../../../Core/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\CC.dir
   OBJECT_FILE_DIR = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
@@ -150,7 +158,7 @@ build CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c.ob
   DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_exti.c.obj.d
   FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
-  INCLUDES = -I../../../Core/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\CC.dir
   OBJECT_FILE_DIR = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
@@ -158,7 +166,7 @@ build CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.
   DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_flash_ex.c.obj.d
   FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
-  INCLUDES = -I../../../Core/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\CC.dir
   OBJECT_FILE_DIR = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
@@ -166,7 +174,7 @@ build CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ram
   DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_flash_ramfunc.c.obj.d
   FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
-  INCLUDES = -I../../../Core/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\CC.dir
   OBJECT_FILE_DIR = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
@@ -174,7 +182,7 @@ build CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c.o
   DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_flash.c.obj.d
   FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
-  INCLUDES = -I../../../Core/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\CC.dir
   OBJECT_FILE_DIR = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
@@ -182,7 +190,7 @@ build CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.ob
   DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_gpio.c.obj.d
   FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
-  INCLUDES = -I../../../Core/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\CC.dir
   OBJECT_FILE_DIR = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
@@ -190,7 +198,7 @@ build CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c.
   DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_pwr_ex.c.obj.d
   FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
-  INCLUDES = -I../../../Core/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\CC.dir
   OBJECT_FILE_DIR = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
@@ -198,7 +206,7 @@ build CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c.obj
   DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_pwr.c.obj.d
   FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
-  INCLUDES = -I../../../Core/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\CC.dir
   OBJECT_FILE_DIR = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
@@ -206,7 +214,7 @@ build CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.
   DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_rcc_ex.c.obj.d
   FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
-  INCLUDES = -I../../../Core/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\CC.dir
   OBJECT_FILE_DIR = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
@@ -214,7 +222,7 @@ build CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
   DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_rcc.c.obj.d
   FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
-  INCLUDES = -I../../../Core/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\CC.dir
   OBJECT_FILE_DIR = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
@@ -222,7 +230,7 @@ build CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi_ex.c.
   DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_spi_ex.c.obj.d
   FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
-  INCLUDES = -I../../../Core/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\CC.dir
   OBJECT_FILE_DIR = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
@@ -230,7 +238,7 @@ build CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c.obj
   DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_spi.c.obj.d
   FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
-  INCLUDES = -I../../../Core/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\CC.dir
   OBJECT_FILE_DIR = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
@@ -238,7 +246,7 @@ build CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c.
   DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_tim_ex.c.obj.d
   FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
-  INCLUDES = -I../../../Core/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\CC.dir
   OBJECT_FILE_DIR = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
@@ -246,7 +254,7 @@ build CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
   DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_tim.c.obj.d
   FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
-  INCLUDES = -I../../../Core/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\CC.dir
   OBJECT_FILE_DIR = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src
 
@@ -254,9 +262,73 @@ build CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj: C_
   DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal.c.obj.d
   FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
-  INCLUDES = -I../../../Core/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\CC.dir
   OBJECT_FILE_DIR = CMakeFiles\CC.dir\Drivers\STM32L4xx_HAL_Driver\Src
+
+build CMakeFiles/CC.dir/hagl/src/bitmap.c.obj: C_COMPILER__CC_Debug ../../../hagl/src/bitmap.c || cmake_object_order_depends_target_CC
+  DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\CC.dir\hagl\src\bitmap.c.obj.d
+  FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\CC.dir
+  OBJECT_FILE_DIR = CMakeFiles\CC.dir\hagl\src
+
+build CMakeFiles/CC.dir/hagl/src/clip.c.obj: C_COMPILER__CC_Debug ../../../hagl/src/clip.c || cmake_object_order_depends_target_CC
+  DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\CC.dir\hagl\src\clip.c.obj.d
+  FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\CC.dir
+  OBJECT_FILE_DIR = CMakeFiles\CC.dir\hagl\src
+
+build CMakeFiles/CC.dir/hagl/src/fontx.c.obj: C_COMPILER__CC_Debug ../../../hagl/src/fontx.c || cmake_object_order_depends_target_CC
+  DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\CC.dir\hagl\src\fontx.c.obj.d
+  FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\CC.dir
+  OBJECT_FILE_DIR = CMakeFiles\CC.dir\hagl\src
+
+build CMakeFiles/CC.dir/hagl/src/hagl.c.obj: C_COMPILER__CC_Debug ../../../hagl/src/hagl.c || cmake_object_order_depends_target_CC
+  DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\CC.dir\hagl\src\hagl.c.obj.d
+  FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\CC.dir
+  OBJECT_FILE_DIR = CMakeFiles\CC.dir\hagl\src
+
+build CMakeFiles/CC.dir/hagl/src/hsl.c.obj: C_COMPILER__CC_Debug ../../../hagl/src/hsl.c || cmake_object_order_depends_target_CC
+  DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\CC.dir\hagl\src\hsl.c.obj.d
+  FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\CC.dir
+  OBJECT_FILE_DIR = CMakeFiles\CC.dir\hagl\src
+
+build CMakeFiles/CC.dir/hagl/src/rgb565.c.obj: C_COMPILER__CC_Debug ../../../hagl/src/rgb565.c || cmake_object_order_depends_target_CC
+  DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\CC.dir\hagl\src\rgb565.c.obj.d
+  FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\CC.dir
+  OBJECT_FILE_DIR = CMakeFiles\CC.dir\hagl\src
+
+build CMakeFiles/CC.dir/hagl/src/rgb888.c.obj: C_COMPILER__CC_Debug ../../../hagl/src/rgb888.c || cmake_object_order_depends_target_CC
+  DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\CC.dir\hagl\src\rgb888.c.obj.d
+  FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\CC.dir
+  OBJECT_FILE_DIR = CMakeFiles\CC.dir\hagl\src
+
+build CMakeFiles/CC.dir/hagl/src/tjpgd.c.obj: C_COMPILER__CC_Debug ../../../hagl/src/tjpgd.c || cmake_object_order_depends_target_CC
+  DEFINES = -DDEBUG -DSTM32L476xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\CC.dir\hagl\src\tjpgd.c.obj.d
+  FLAGS = -g -g3 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard
+  INCLUDES = -I../../../Core/Inc -I../../../hagl/include -I../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\CC.dir
+  OBJECT_FILE_DIR = CMakeFiles\CC.dir\hagl\src
 
 
 # =============================================================================
@@ -266,7 +338,7 @@ build CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj: C_
 #############################################
 # Link the executable CC.elf
 
-build CC.elf: C_EXECUTABLE_LINKER__CC_Debug CMakeFiles/CC.dir/Core/Src/gpio.c.obj CMakeFiles/CC.dir/Core/Src/lcd.c.obj CMakeFiles/CC.dir/Core/Src/main.c.obj CMakeFiles/CC.dir/Core/Src/spi.c.obj CMakeFiles/CC.dir/Core/Src/stm32l4xx_hal_msp.c.obj CMakeFiles/CC.dir/Core/Src/stm32l4xx_it.c.obj CMakeFiles/CC.dir/Core/Src/syscalls.c.obj CMakeFiles/CC.dir/Core/Src/sysmem.c.obj CMakeFiles/CC.dir/Core/Src/system_stm32l4xx.c.obj CMakeFiles/CC.dir/Core/Startup/startup_stm32l476rgtx.s.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi_ex.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
+build CC.elf: C_EXECUTABLE_LINKER__CC_Debug CMakeFiles/CC.dir/Core/Src/gpio.c.obj CMakeFiles/CC.dir/Core/Src/lcd.c.obj CMakeFiles/CC.dir/Core/Src/logo.c.obj CMakeFiles/CC.dir/Core/Src/main.c.obj CMakeFiles/CC.dir/Core/Src/spi.c.obj CMakeFiles/CC.dir/Core/Src/stm32l4xx_hal_msp.c.obj CMakeFiles/CC.dir/Core/Src/stm32l4xx_it.c.obj CMakeFiles/CC.dir/Core/Src/syscalls.c.obj CMakeFiles/CC.dir/Core/Src/sysmem.c.obj CMakeFiles/CC.dir/Core/Src/system_stm32l4xx.c.obj CMakeFiles/CC.dir/Core/Startup/startup_stm32l476rgtx.s.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi_ex.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj CMakeFiles/CC.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj CMakeFiles/CC.dir/hagl/src/bitmap.c.obj CMakeFiles/CC.dir/hagl/src/clip.c.obj CMakeFiles/CC.dir/hagl/src/fontx.c.obj CMakeFiles/CC.dir/hagl/src/hagl.c.obj CMakeFiles/CC.dir/hagl/src/hsl.c.obj CMakeFiles/CC.dir/hagl/src/rgb565.c.obj CMakeFiles/CC.dir/hagl/src/rgb888.c.obj CMakeFiles/CC.dir/hagl/src/tjpgd.c.obj
   FLAGS = -g
   LINK_FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -T C:/Users/mrchl/STM32CubeIDE/workspace_1.12.1/CC/CC/STM32L476RGTX_FLASH.ld
   OBJECT_DIR = CMakeFiles\CC.dir

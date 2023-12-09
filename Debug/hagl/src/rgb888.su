@@ -1,0 +1,4 @@
+C:/Users/mrchl/STM32CubeIDE/workspace_1.12.1/CC/CC/hagl/include/rgb888.h:49:19:min	16	static
+C:/Users/mrchl/STM32CubeIDE/workspace_1.12.1/CC/CC/hagl/include/rgb888.h:56:19:max	16	static
+../hagl/src/rgb888.c:43:7:rgb888_to_hsl	144	static
+../hagl/src/rgb888.c:90:10:rgb888_to_rgb565	24	static

@@ -16,6 +16,7 @@ target_compile_definitions(
 target_include_directories(
     ${TARGET_NAME} PRIVATE
     "$<$<AND:$<CONFIG:Debug>,$<COMPILE_LANGUAGE:C>>:${PROJECT_SOURCE_DIR}/Core\\Inc>"
+    "$<$<AND:$<CONFIG:Debug>,$<COMPILE_LANGUAGE:C>>:${PROJECT_SOURCE_DIR}/hagl/include>"
     "$<$<AND:$<CONFIG:Debug>,$<COMPILE_LANGUAGE:C>>:${PROJECT_SOURCE_DIR}/Drivers\\STM32L4xx_HAL_Driver\\Inc>"
     "$<$<AND:$<CONFIG:Debug>,$<COMPILE_LANGUAGE:C>>:${PROJECT_SOURCE_DIR}/Drivers\\STM32L4xx_HAL_Driver\\Inc\\Legacy>"
     "$<$<AND:$<CONFIG:Debug>,$<COMPILE_LANGUAGE:C>>:${PROJECT_SOURCE_DIR}/Drivers\\CMSIS\\Device\\ST\\STM32L4xx\\Include>"
@@ -74,6 +75,7 @@ target_sources(
     ${TARGET_NAME} PRIVATE
     "Core\\Src\\gpio.c"
     "Core\\Src\\lcd.c"
+    "Core\\Src\\logo.c"
     "Core\\Src\\main.c"
     "Core\\Src\\spi.c"
     "Core\\Src\\stm32l4xx_hal_msp.c"
@@ -99,6 +101,14 @@ target_sources(
     "Drivers\\STM32L4xx_HAL_Driver\\Src\\stm32l4xx_hal_tim_ex.c"
     "Drivers\\STM32L4xx_HAL_Driver\\Src\\stm32l4xx_hal_tim.c"
     "Drivers\\STM32L4xx_HAL_Driver\\Src\\stm32l4xx_hal.c"
+    "hagl\\src\\bitmap.c"
+    "hagl\\src\\clip.c"
+    "hagl\\src\\fontx.c"
+    "hagl\\src\\hagl.c"
+    "hagl\\src\\hsl.c"
+    "hagl\\src\\rgb565.c"
+    "hagl\\src\\rgb888.c"
+    "hagl\\src\\tjpgd.c"
 )
 
 add_custom_command(
