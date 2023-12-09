@@ -99,7 +99,7 @@ void lcd_init(void)
   lcd_cmd(ST7735S_DISPON);
 }
 
-
+static uint16_t frame_buffer[LCD_WIDTH * LCD_HEIGHT];
 
 
 
@@ -113,8 +113,6 @@ static void lcd_data16(uint16_t value)
 
 #define LCD_OFFSET_X  1
 #define LCD_OFFSET_Y  2
-
-
 #define LCD_OFFSET_X  1
 #define LCD_OFFSET_Y  2
 
@@ -140,12 +138,10 @@ void lcd_fill_box(int x, int y, int width, int height, uint16_t color)
 }
 
 
-
 void lcd_put_pixel(int x, int y, uint16_t color)
 {
-  lcd_fill_box(x, y, 1, 1, color);
+	frame_buffer[x + y * LCD_WIDTH] = color;
 }
-
 
 
 void lcd_draw_image(int x, int y, int width, int height, const uint8_t* data)
@@ -156,5 +152,20 @@ void lcd_draw_image(int x, int y, int width, int height, const uint8_t* data)
 	HAL_GPIO_WritePin(LCD_DC_GPIO_Port, LCD_DC_Pin, GPIO_PIN_SET);
 	HAL_GPIO_WritePin(LCD_CS_GPIO_Port, LCD_CS_Pin, GPIO_PIN_RESET);
 	HAL_SPI_Transmit(&hspi2, (uint8_t*)data, width * height * 2, HAL_MAX_DELAY);
+	HAL_GPIO_WritePin(LCD_CS_GPIO_Port, LCD_CS_Pin, GPIO_PIN_SET);
+}
+
+
+//bufor
+static uint16_t frame_buffer[LCD_WIDTH * LCD_HEIGHT];
+
+
+void lcd_copy(void)
+{
+	lcd_set_window(0, 0, LCD_WIDTH, LCD_HEIGHT);
+	lcd_cmd(ST7735S_RAMWR);
+	HAL_GPIO_WritePin(LCD_DC_GPIO_Port, LCD_DC_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(LCD_CS_GPIO_Port, LCD_CS_Pin, GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&hspi2, (uint8_t*)frame_buffer, sizeof(frame_buffer), HAL_MAX_DELAY);
 	HAL_GPIO_WritePin(LCD_CS_GPIO_Port, LCD_CS_Pin, GPIO_PIN_SET);
 }
