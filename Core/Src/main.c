@@ -56,7 +56,7 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+uint16_t test_image[64*64];
 /* USER CODE END 0 */
 
 /**
@@ -94,22 +94,24 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  lcd_init();
-  lcd_fill_box(0, 0, 160, 16, RED);
-  lcd_fill_box(0, 16, 160, 16, GREEN);
-  lcd_fill_box(0, 32, 160, 16, BLUE);
-  lcd_fill_box(0, 48, 160, 16, YELLOW);
-  lcd_fill_box(0, 64, 160, 16, MAGENTA);
-  lcd_fill_box(0, 80, 160, 16, CYAN);
-  lcd_fill_box(0, 96, 160, 16, WHITE);
-  lcd_fill_box(0, 112, 160, 16, BLACK);
+ lcd_init();
+lcd_fill_box(0, 0, 160, 16, RED);
+lcd_fill_box(0, 16, 160, 16, GREEN);
+lcd_fill_box(0, 32, 160, 16, BLUE);
+lcd_fill_box(0, 48, 160, 16, YELLOW);
+lcd_fill_box(0, 64, 160, 16, MAGENTA);
+lcd_fill_box(0, 80, 160, 16, CYAN);
+lcd_fill_box(0, 96, 160, 16, WHITE);
+lcd_fill_box(0, 112, 160, 16, BLACK);
 
-      for (int i = 0; i < 128; i++) {
-      lcd_put_pixel(i, i, RED);
-      lcd_put_pixel(127 - i, i, RED);
-    }
-    lcd_draw_image(35, 20, 100, 90, wiki_logo);
+for (int i = 0; i < 64 * 64; i++)
+  test_image[i] = WHITE;
 
+lcd_draw_image(0, 0, 64, 64, test_image);
+lcd_draw_image(16, 16, 64, 64, test_image);
+lcd_draw_image(32, 32, 64, 64, test_image);
+lcd_draw_image(48, 48, 64, 64, test_image);
+lcd_draw_image(64, 64, 64, 64, test_image);
 
   while (1)
   {
