@@ -1,7 +1,7 @@
 #pragma once
 #include <stdint.h>
-
-
+//#include "stm32l4xx_hal_i2c.h"
+#include "stm32l4xx_hal.h"
 
 
 #define I2C_DEFAULT_ADDRESS 0x36

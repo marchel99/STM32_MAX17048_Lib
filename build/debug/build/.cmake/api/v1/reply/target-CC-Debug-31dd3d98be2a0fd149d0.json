@@ -162,7 +162,7 @@
 				17,
 				18,
 				19,
-				21,
+				20,
 				22,
 				23,
 				24,
@@ -182,7 +182,8 @@
 				38,
 				39,
 				40,
-				41
+				41,
+				42
 			]
 		},
 		{
@@ -218,7 +219,7 @@
 			"language" : "ASM",
 			"sourceIndexes" : 
 			[
-				20
+				21
 			]
 		}
 	],
@@ -296,7 +297,7 @@
 				17,
 				18,
 				19,
-				21,
+				20,
 				22,
 				23,
 				24,
@@ -316,14 +317,15 @@
 				38,
 				39,
 				40,
-				41
+				41,
+				42
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				20
+				21
 			]
 		}
 	],
@@ -405,6 +407,12 @@
 			"backtrace" : 7,
 			"compileGroupIndex" : 0,
 			"path" : "Core/Src/main.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "Core/Src/max.c",
 			"sourceGroupIndex" : 0
 		},
 		{

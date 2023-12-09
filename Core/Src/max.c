@@ -1,5 +1,6 @@
-#include "lcd.h"
+#include "max.h"
 #include "i2c.h"
+
 
 float read_voltage(I2C_HandleTypeDef *hi2c) {
     uint8_t data[2];

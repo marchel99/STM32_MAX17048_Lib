@@ -86,6 +86,7 @@ target_sources(
     "Core\\Src\\lcd.c"
     "Core\\Src\\logo.c"
     "Core\\Src\\main.c"
+    "Core\\Src\\max.c"
     "Core\\Src\\rtc.c"
     "Core\\Src\\spi.c"
     "Core\\Src\\stm32l4xx_hal_msp.c"
