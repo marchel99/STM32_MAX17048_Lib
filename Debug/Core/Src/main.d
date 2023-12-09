@@ -21,11 +21,16 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash_ex.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash_ramfunc.h \
+ ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h \
+ ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h \
+ ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rtc.h \
+ ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rtc_ex.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h \
- ../Core/Inc/spi.h ../Core/Inc/main.h ../Core/Inc/gpio.h \
+ ../Core/Inc/i2c.h ../Core/Inc/main.h ../Core/Inc/rtc.h ../Core/Inc/spi.h \
+ ../Core/Inc/gpio.h \
  C:/Users/mrchl/STM32CubeIDE/workspace_1.12.1/CC/CC/hagl/include/hagl.h \
  ../Core/Inc/hagl_hal.h ../Core/Inc/lcd.h \
  C:/Users/mrchl/STM32CubeIDE/workspace_1.12.1/CC/CC/hagl/include/bitmap.h \
@@ -33,7 +38,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  C:/Users/mrchl/STM32CubeIDE/workspace_1.12.1/CC/CC/hagl/include/font6x9.h \
  C:/Users/mrchl/STM32CubeIDE/workspace_1.12.1/CC/CC/hagl/include/rgb565.h \
  C:/Users/mrchl/STM32CubeIDE/workspace_1.12.1/CC/CC/hagl/include/rgb888.h \
- C:/Users/mrchl/STM32CubeIDE/workspace_1.12.1/CC/CC/hagl/include/hsl.h
+ C:/Users/mrchl/STM32CubeIDE/workspace_1.12.1/CC/CC/hagl/include/hsl.h \
+ ../Core/Src/max.h
 ../Core/Inc/main.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 ../Core/Inc/stm32l4xx_hal_conf.h:
@@ -57,12 +63,18 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash_ex.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash_ramfunc.h:
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h:
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h:
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rtc.h:
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rtc_ex.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h:
-../Core/Inc/spi.h:
+../Core/Inc/i2c.h:
 ../Core/Inc/main.h:
+../Core/Inc/rtc.h:
+../Core/Inc/spi.h:
 ../Core/Inc/gpio.h:
 C:/Users/mrchl/STM32CubeIDE/workspace_1.12.1/CC/CC/hagl/include/hagl.h:
 ../Core/Inc/hagl_hal.h:
@@ -73,3 +85,4 @@ C:/Users/mrchl/STM32CubeIDE/workspace_1.12.1/CC/CC/hagl/include/font6x9.h:
 C:/Users/mrchl/STM32CubeIDE/workspace_1.12.1/CC/CC/hagl/include/rgb565.h:
 C:/Users/mrchl/STM32CubeIDE/workspace_1.12.1/CC/CC/hagl/include/rgb888.h:
 C:/Users/mrchl/STM32CubeIDE/workspace_1.12.1/CC/CC/hagl/include/hsl.h:
+../Core/Src/max.h:

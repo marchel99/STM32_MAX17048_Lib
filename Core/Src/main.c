@@ -27,10 +27,12 @@
 /* USER CODE BEGIN Includes */
 // #include "lcd.h"
 // #include "logo.c"
+
 #include <wchar.h>
 #include "hagl.h"
 #include "font6x9.h"
 #include "rgb565.h"
+#include "max.h"
 
 #include <stdio.h>
 #include <string.h>
@@ -155,6 +157,14 @@ int main(void)
     hagl_put_text(time_buffer, 15, 20, WHITE, font6x9);
     lcd_copy();
     HAL_Delay(1000);
+
+
+
+
+
+
+
+
 
     /* USER CODE END WHILE */
 
