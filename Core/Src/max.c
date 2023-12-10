@@ -44,3 +44,19 @@ float read_soc(I2C_HandleTypeDef *hi2c)
 
     return soc;
 }
+
+
+uint8_t read_ic_version(I2C_HandleTypeDef *hi2c) {
+    uint8_t version;
+    uint8_t reg = REGISTER_VERSION; // Adres rejestru VERSION to 0x08
+
+    // Odczyt 1 bajtu z rejestru VERSION
+    HAL_StatusTypeDef status = HAL_I2C_Mem_Read(hi2c, I2C_DEFAULT_ADDRESS << 1, reg, I2C_MEMADD_SIZE_8BIT, &version, sizeof(version), HAL_MAX_DELAY);
+    
+    if (status != HAL_OK) {
+        // W przypadku błędu zwróć 0xFF
+        return 0xFF;
+    }
+    
+    return version;
+}

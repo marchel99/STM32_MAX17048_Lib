@@ -17,7 +17,11 @@
 #define REGISTER_MODE       0x06
 //Hibernation State: The MODE register can indicate whether the chip is in hibernation mode. There is a specific bit within this register that signals this state.
 
+#define REGISTER_VERSION    0x08
+//
 
 float read_voltage(I2C_HandleTypeDef *hi2c);
 
 float read_soc(I2C_HandleTypeDef *hi2c);
+
+uint8_t read_ic_version(I2C_HandleTypeDef *hi2c);

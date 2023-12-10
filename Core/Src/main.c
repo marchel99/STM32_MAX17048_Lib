@@ -174,7 +174,6 @@ int main(void)
 
 
 
-
         float battery_soc = read_soc(&hi2c1);
         wchar_t soc_buffer[32]; // Bufor na procent naładowania baterii
 
@@ -189,6 +188,28 @@ int main(void)
               // Wyświetlanie informacji o błędzie
               hagl_put_text(L"Błąd odczytu SoC!", 15, 50, WHITE, font6x9);
             }
+
+
+
+        uint8_t ic_version = read_ic_version(&hi2c1);
+        wchar_t version_buffer[32]; // Bufor na wersję układu IC
+
+        if (ic_version != 0xFF) {
+            // Formatowanie i wyświetlanie wersji układu IC
+            swprintf(version_buffer, sizeof(version_buffer), L"Wersja IC: 0x%02X", ic_version);
+            hagl_put_text(version_buffer, 15, 60, WHITE, font6x9); // Zmienić położenie tekstu w razie potrzeby
+        } else {
+            // Wyświetlanie informacji o błędzie
+            hagl_put_text(L"Błąd odczytu wersji IC!", 15, 60, WHITE, font6x9);
+        }
+
+
+
+
+
+
+
+
 
     lcd_copy();
     HAL_Delay(1000);
