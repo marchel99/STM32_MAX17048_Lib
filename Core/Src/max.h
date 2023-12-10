@@ -19,3 +19,5 @@
 
 
 float read_voltage(I2C_HandleTypeDef *hi2c);
+
+float read_soc(I2C_HandleTypeDef *hi2c);

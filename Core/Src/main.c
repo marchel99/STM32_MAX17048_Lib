@@ -73,9 +73,9 @@ uint16_t test_image[64 * 64];
 /* USER CODE END 0 */
 
 /**
-  * @brief  The application entry point.
-  * @retval int
-  */
+ * @brief  The application entry point.
+ * @retval int
+ */
 int main(void)
 {
   /* USER CODE BEGIN 1 */
@@ -133,12 +133,11 @@ int main(void)
   wchar_t buffer[32];          // Bufor na ciąg znaków, musi być wystarczająco duży
 
   // Konwersja int na ciąg znaków
-  swprintf(buffer, 32, L"Pomiar prądu: %.2f mA", your_variable);
+  // swprintf(buffer, 32, L"Pomiar prądu: %.2f mA", your_variable);
 
   // hagl_put_text(L"Godzina: ", 15, 20, WHITE, font6x9);
   //-l_+p , -g|+d
 
-  hagl_put_text(L"Pomiar napięcia:  ", 15, 30, WHITE, font6x9);
 
   // Teraz możesz wywołać funkcję hagl_put_text z tym buforem
   hagl_put_text(buffer, 15, 40, WHITE, font6x9);
@@ -155,16 +154,44 @@ int main(void)
     swprintf(time_buffer, sizeof(time_buffer), L"Czas: %02d:%02d:%02d", time.Hours, time.Minutes, time.Seconds);
 
     hagl_put_text(time_buffer, 15, 20, WHITE, font6x9);
+
+
+
+        float battery_voltage = read_voltage(&hi2c1);
+        wchar_t voltage_buffer[32]; // Bufor na napięcie baterii
+
+        if (battery_voltage > 0)
+            {
+              // Formatowanie i wyświetlanie napięcia baterii
+              swprintf(voltage_buffer, sizeof(voltage_buffer), L"Napięcie: %.2fV", battery_voltage);
+              hagl_put_text(voltage_buffer, 15, 40, WHITE, font6x9); // Zmienić położenie tekstu w razie potrzeby
+            }
+        else
+            {
+              // Wyświetlanie informacji o błędzie
+              hagl_put_text(L"Błąd odczytu napięcia!", 15, 40, WHITE, font6x9);
+            }
+
+
+
+
+        float battery_soc = read_soc(&hi2c1);
+        wchar_t soc_buffer[32]; // Bufor na procent naładowania baterii
+
+        if (battery_soc >= 0)
+            {
+              // Formatowanie i wyświetlanie stanu naładowania baterii
+              swprintf(soc_buffer, sizeof(soc_buffer), L"Naładowanie: %.2f%%", battery_soc);
+              hagl_put_text(soc_buffer, 15, 50, WHITE, font6x9); // Zmienić położenie tekstu w razie potrzeby
+            }
+        else
+            {
+              // Wyświetlanie informacji o błędzie
+              hagl_put_text(L"Błąd odczytu SoC!", 15, 50, WHITE, font6x9);
+            }
+
     lcd_copy();
     HAL_Delay(1000);
-
-
-
-
-
-
-
-
 
     /* USER CODE END WHILE */
 
@@ -174,25 +201,25 @@ int main(void)
 }
 
 /**
-  * @brief System Clock Configuration
-  * @retval None
-  */
+ * @brief System Clock Configuration
+ * @retval None
+ */
 void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
   /** Configure the main internal regulator output voltage
-  */
+   */
   if (HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1) != HAL_OK)
   {
     Error_Handler();
   }
 
   /** Initializes the RCC Oscillators according to the specified parameters
-  * in the RCC_OscInitTypeDef structure.
-  */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_LSI|RCC_OSCILLATORTYPE_MSI;
+   * in the RCC_OscInitTypeDef structure.
+   */
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_LSI | RCC_OSCILLATORTYPE_MSI;
   RCC_OscInitStruct.LSIState = RCC_LSI_ON;
   RCC_OscInitStruct.MSIState = RCC_MSI_ON;
   RCC_OscInitStruct.MSICalibrationValue = 0;
@@ -210,9 +237,8 @@ void SystemClock_Config(void)
   }
 
   /** Initializes the CPU, AHB and APB buses clocks
-  */
-  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
-                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+   */
+  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
@@ -229,9 +255,9 @@ void SystemClock_Config(void)
 /* USER CODE END 4 */
 
 /**
-  * @brief  This function is executed in case of error occurrence.
-  * @retval None
-  */
+ * @brief  This function is executed in case of error occurrence.
+ * @retval None
+ */
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
@@ -243,14 +269,14 @@ void Error_Handler(void)
   /* USER CODE END Error_Handler_Debug */
 }
 
-#ifdef  USE_FULL_ASSERT
+#ifdef USE_FULL_ASSERT
 /**
-  * @brief  Reports the name of the source file and the source line number
-  *         where the assert_param error has occurred.
-  * @param  file: pointer to the source file name
-  * @param  line: assert_param error line source number
-  * @retval None
-  */
+ * @brief  Reports the name of the source file and the source line number
+ *         where the assert_param error has occurred.
+ * @param  file: pointer to the source file name
+ * @param  line: assert_param error line source number
+ * @retval None
+ */
 void assert_failed(uint8_t *file, uint32_t line)
 {
   /* USER CODE BEGIN 6 */
