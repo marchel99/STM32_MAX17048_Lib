@@ -4,6 +4,11 @@ STM32 library for interfacing with the MAX17048 LiPo battery fuel gauge, utilizi
 ## Overview
 This library provides an interface for the MAX17048 LiPo battery fuel gauge, tailored for STM32 microcontrollers using HAL. It allows for reading the battery voltage, state of charge (SoC), and the IC version.
 
+## Schematic
+
+![Alt text](https://i.imgur.com/clUtPQL.png)
+
+
 ## Getting Started
 To use this library, clone the repository or download the source files into your project directory.
 
